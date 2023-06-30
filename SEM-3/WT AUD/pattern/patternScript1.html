@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern - 1</title>
+    <style>
+        .output{
+            color: red;
+            line-height: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        n = parseInt(prompt("Enter the number : "));
+        
+        document.write("<div class='output'>")
+            for(i=0;i<n;i++){
+                for(j=0;j<i;j++){
+                    document.write("*");
+                }
+                document.write("<br/>")
+            }
+        document.write("</div>")
+    </script>
+    
+</body>
+</html>

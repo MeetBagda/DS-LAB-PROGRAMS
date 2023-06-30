@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <script>
+        n1=Number(prompt("Enter number - 1: "));
+        n2=Number(prompt("Enter number - 2: "));
+
+        c = prompt("Choose Operator");
+
+        if(c=='+'){
+            ans = n1+n2;
+            document.write(ans);
+        }
+        else if(c=='-'){
+            ans = n1-n2;
+            document.write(ans);
+        }
+        else if(c=='*'){
+            ans = n1*n2;
+            document.write(ans);
+        }
+        else if(c=='/'){
+            ans = n1/n2;
+            document.write(ans);
+        }else {
+            document.write("Invalid operator");
+        }
+
+    </script>
+</body>
+</html>

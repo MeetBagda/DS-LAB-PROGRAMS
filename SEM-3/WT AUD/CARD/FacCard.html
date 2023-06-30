@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <style>
+    .card-img-top {
+      max-height: 250px;
+      object-fit: contain;
+    }
+
+    .post {
+      font-weight: 500;
+      color: red;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="row">
+
+
+      <script type="text/javascript">
+
+        alert("Do you want to proceed?")
+
+
+        function buttonPrs() {
+          Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              Swal.fire(
+                'Deleted!',
+                'Your file has been deleted.',
+                'success'
+              )
+            }
+          })
+        }
+
+        function confirm() {
+          Swal.fire({
+            title: 'Do you want to check out profile?',
+            showDenyButton: false,
+            showCancelButton: true,
+            confirmButtonText: 'Save',
+            denyButtonText: `Don't save`,
+          })
+          // .then((result) => {
+          //   // /* Read more about isConfirmed, isDenied below */
+          //   // // if (result.isConfirmed) {
+          //   // //   return result;
+          //   // // } 
+          //   // // else if (result.isDenied) {
+          //   // //   Swal.fire('Changes are not saved', '', 'info')
+          //   // // }
+            
+          // })
+
+        }
+
+
+
+        function profile() {
+          // var result = confirm("Do you want to check out profile?")
+          // if (result == true) {
+          //   return result;
+          // }
+
+         
+        var result = confirm()
+
+        if (result == true) {
+            return result;
+          }
+
+          
+        }
+
+        
+
+        a = [
+          ["Dr. Gopi Sanghani", "https://darshan.ac.in/U01/Faculty-Photo/5---29-04-2023-11-00-29.jpg", "22", "Dean - School of Computer Science", "Ph.D. , M.E. (CE)", "https://www.darshan.ac.in/faculty-profile/Dr-Gopi-Bhupendrabhai-Sanghani"],
+          ["Dr. Nilesh Gambhava", "https://darshan.ac.in/U01/Faculty-Photo/3---28-04-2023-02-02-42.jpg", "20", "Professor", "Ph.D. , M.E. (CE)", "https://www.darshan.ac.in/faculty-profile/Dr-Nilesh-Maganbhai-Gambhava"],
+          ["Dr. Pradyumansinh Jadeja", "https://darshan.ac.in/U01/Faculty-Photo/6---28-04-2023-02-06-07.jpg", "17", "Professor", "Ph.D. , M.E. (CE)"],
+          ["Prof. Arjun Bala", "https://darshan.ac.in/U01/Faculty-Photo/15---28-04-2023-02-07-35.jpg", "13", "Assistant Professor", "Ph.D.(Pursuing), M.Tech.(CSE)", "https://www.darshan.ac.in/faculty-profile/Prof-Arjun-Virjibhai-Bala"],
+          ["Prof. Krunal Vyas", "https://darshan.ac.in/U01/Faculty-Photo/290---28-04-2023-02-09-16.jpg", "9", "Assistant Professor", "M.Tech. (ICT)", "https://www.darshan.ac.in/faculty-profile/Prof-Krunal-Dilipbhai-Vyas"]
+        ];
+
+        for (temp of a) {
+          document.write(' <div class="card col-3"> ');
+          document.write('<img src="' + temp[1] + '" class="card-img-top" alt="Fac img">');
+          document.write('<div class="card-body">');
+          document.write('<h5 class="card-title">' + temp[0] + '</h5>');
+          document.write('<p class="card-text post">' + temp[3] + '</p>');
+          document.write('<p class="card-text exp">experience : ' + temp[2] + '</p>');
+          document.write('<p class="card-text">education : ' + temp[4] + '</p>');
+          document.write('<a href="' + temp[5] + '" class="btn btn-primary" onclick="profile()">Profile</a>');
+          document.write('</div>');
+          document.write('</div>');
+        }
+      </script>
+
+
+    </div>
+
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

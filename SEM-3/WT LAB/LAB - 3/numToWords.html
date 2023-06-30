@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>number to words</title>
+</head>
+<body>
+    <h1>Number to Words</h1>
+    <script>
+        n=Number.parseInt(prompt("Enter the number"));
+
+        numStr = String(n);
+        len = numStr.length;
+
+        a1=["One","Two","Three","Four","Five","Six","Seven","Eight","Nine"];
+        a2=["Eleven","twelve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Ninteen",]
+        a3=["Twenty","Thirty","Fourty","Fifty","Sixty","Seventy","Eighty","Ninty"]
+
+        Str = "";
+
+        if(len==2){
+            lastN = n%10;
+            n=n/10;
+            firstN = n%10;
+        }
+    </script>
+</body>
+</html>

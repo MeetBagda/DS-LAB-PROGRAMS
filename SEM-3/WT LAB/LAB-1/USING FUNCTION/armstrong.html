@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong</title>
+</head>
+
+<body>
+    <h1>Armstrong</h1>
+
+    <script>
+        function isArmstrongNumber(number) {
+            const numString = String(number);
+
+            const length = numString.length;
+
+            let sum = 0;
+
+            for (let i = 0; i < length; i++) {
+                const digit = Number(numString[i]);
+
+                sum += Math.pow(digit, length);
+            }
+
+            return sum == number;
+        }
+
+        n = Number(prompt("Enter number : "));
+        document.write(isArmstrongNumber(n));
+
+
+    </script>
+</body>
+
+</html>

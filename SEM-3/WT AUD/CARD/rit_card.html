@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Card Demo</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .card-img-top {
+      max-height: 250px;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="card-deck">
+
+      <script type="text/javascript">
+        a = [
+          ["Dr. Gopi Sanghani", "https://darshan.ac.in/U01/Faculty-Photo/5---29-04-2023-11-00-29.jpg", "22"],
+          ["Dr. Nilesh Gambhava", "https://darshan.ac.in/U01/Faculty-Photo/3---28-04-2023-02-02-42.jpg", "20"],
+          ["Dr. Pradyumansinh Jadeja", "https://darshan.ac.in/U01/Faculty-Photo/6---28-04-2023-02-06-07.jpg", "17"],
+          ["Prof. Arjun Bala", "https://darshan.ac.in/U01/Faculty-Photo/15---28-04-2023-02-07-35.jpg", "13"],
+          ["Prof. Krunal Vyas","https://darshan.ac.in/U01/Faculty-Photo/290---28-04-2023-02-09-16.jpg","9"]
+        ];
+
+        for (temp of a) 
+        {
+          document.write('<div class="card" style="width: 18rem;">');
+          document.write(`<img src="${temp[1]}" class="card-img-top">`);
+          document.write('<div class="card-body">');
+          document.write(`<p class="card-text">${temp[0]}</p>`);
+          document.write(`<p class="card-text">${temp[2]}</p>`);
+          document.write('</div></div>');
+        }
+      </script>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
